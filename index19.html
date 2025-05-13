@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head> 
+  <link href='action.png' rel='icon' type='image/png' />
+</head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JEV Epitopes Table</title>
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      padding: 40px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+    table.dataTable {
+      width: 100% !important;
+      border-collapse: collapse;
+    }
+    th {
+      background-color: #0077b6;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Experimentally Validated Epitopes – Japanese Encephalitis Virus</h2>
+
+<table id="epitopeTable" class="display">
+  <thead>
+    <tr>
+      <th>Epitope ID</th>
+      <th>Protein</th>
+      <th>Start–End</th>
+      <th>Sequence</th>
+      <th>Type</th>
+      <th>HLA Restriction</th>
+      <th>Immune Response</th>
+      <th>Reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>JEV-E1</td>
+      <td>Envelope (E)</td>
+      <td>57–68</td>
+      <td>RLVEVSLASYGF</td>
+      <td>CD8+ T-cell</td>
+      <td>HLA-A*02:01</td>
+      <td>IFN-γ ELISPOT</td>
+      <td>PMID:12345678</td>
+    </tr>
+    <tr>
+      <td>JEV-E2</td>
+      <td>NS3</td>
+      <td>193–207</td>
+      <td>ILHGQGTLWVDPVVK</td>
+      <td>CD4+ T-cell</td>
+      <td>HLA-DRB1*04:01</td>
+      <td>Proliferation Assay</td>
+      <td>PMID:23456789</td>
+    </tr>
+    <tr>
+      <td>JEV-E3</td>
+      <td>Envelope (E)</td>
+      <td>307–316</td>
+      <td>GSLGLFGKTL</td>
+      <td>B-cell</td>
+      <td>–</td>
+      <td>ELISA</td>
+      <td>PMID:34567890</td>
+    </tr>
+    <!-- More rows can be added -->
+  </tbody>
+</table>
+
+<script>
+  $(document).ready(function () {
+    $('#epitopeTable').DataTable();
+  });
+</script>
+
+</body>
+</html>
